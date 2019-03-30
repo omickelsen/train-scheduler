@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <title></title>
+</head>
+
+<body>
+
+<div class="container">
+<div class="jumbotron text-center">
+    <h1>  Train Time </h1>
+      <div id="currentTime"></div>
+</div>
+
+<div class="card-body"><div id="full-member-list"></div></div>
+
+<div class="card">
+<table class="col-lg-12 col-md-12 text-left">
+<thead>Current Train Schedule</thead>
+  <tr>
+      <th>Train Name</th>
+      <th>Destination</th>
+      <th>Frequency</th>
+      <th>Next Arrival</th>
+      <th>Minutes Away</th>
+    </tr>
+    <tr>
+      <td id="train-display"></td>
+      <td id="destination-display"></td>
+      <td id="frequency-display"></td>
+      <td id="time-display"></td>
+      <td id="minutesAway-display"></td>
+    </tr>
+    <tr id="allTheTime">
+    </tr>
+    </table>
+  </div>
+  
+<div id="card" class="bg-danger">
+  <form action="/action_page.php">
+    Train Name:<br>
+    <input id="train" class="col-lg-12 col-md-12" type="text" name="trainName" value="">
+    <br>
+    Destination:<br>
+    <input id="destination" class="col-lg-12 col-md-12" type="text" name="destination" value="">
+    <br>
+    First Train Time (HH:mm - military time):<br>
+    <input id="time" class="col-lg-12 col-md-12" type="text" name="firstTrainTime" value="">
+    <br>
+    Frequency:<br>
+    <input id="frequency" class="col-lg-12 col-md-12" type="text" name="Frequency" value="">
+    <br>
+    <br>
+    <button class="btn btn-default" id="addTrain" type="submit">Submit</button>
+  </form> 
+</div>
+
+<input id="add-train" value="Add Item" type="submit">
+TESTING
+
+</div>
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="javascript/app.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
